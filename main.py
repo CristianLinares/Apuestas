@@ -18,7 +18,7 @@ def enviar_mensaje(texto):
 def analizar_y_enviar():
     pick = (
         "*[Análisis automático]*\n"
-        "*Tenis de mesa - Liga Pro Checa*\n"
+        "*Tenis de mesa – Liga Pro Checa*\n"
         "*Partido:* Novy vs Trsekn\n"
         "*Pick:* Más de 75.5 puntos totales\n"
         "*Stake:* 8/10\n"
@@ -27,6 +27,10 @@ def analizar_y_enviar():
     )
     enviar_mensaje(pick)
 
-if __name__ == "__main__":
+# Enviar mensaje al iniciar
+analizar_y_enviar()
+
+# Luego continuar cada 2 horas
+while True:
+    time.sleep(7200)
     analizar_y_enviar()
-    time.sleep(7200)  # cada 2 horas (opcional, si quieres que se repita)
